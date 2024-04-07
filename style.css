@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: font;
+    list-style-type:none;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4070f4;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0b3cc1;
+}
+
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(Poppins-Black.ttf);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-color: #1f2336;
+    background-blend-mode: darken;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container header{
+    background-color: #161a22;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+}
+.container main{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-1 ;
+    display: flex;
+    align-items: center;
+}
+main .nav-section{
+    border-right: 1.5px solid rgba(225,225,225,.3);
+    height: 90%;
+    width: 70px;
+    display: flex;
+    align-items: center ;
+    position: fixed;
+}
+main .content-section{
+    display:flex;
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+    width:100%;
+    flex-wrap: wrap;
+    padding: 75px 15px 10px 85px;
+    justify-content: center;
+    z-index:-200;
+}
+/* the next link tournment */
+main .tournament-page{
+    display:none;
+    height: 100%;
+    max-width: 1400px;
+    width:100%;
+    padding: 75px 15px 10px 85px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tournament-page .head-sec{
+    max-width:100%;
+    width:800px;
+    height: 40%;
+    background-color: #161a22;
+    border-radius:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.head-sec .img{
+    width: 30px;
+    position: absolute;
+    animation: roll 6s linear infinite;
+}
+@keyframes roll {
+    100%{
+        rotate: 360deg;
+    }
+}
+.head-sec img:nth-child(1){
+    left: 10%;
+    top: 20%;
+}
+.head-sec img:nth-child(2){
+    left: 20%;
+    top: 40%;
+    width: 40px;
+}
+.head-sec img:nth-child(3){
+    left: 10%;
+    top: 70%;
+}
+.head-sec img:nth-child(4){
+    right: 10%;
+    top: 20%;
+}
+.head-sec img:nth-child(5){
+    right: 20%;
+    top: 40%;
+    width: 40px;
+}
+.head-sec img:nth-child(6){
+    right: 10%;
+    top: 70%;
+}
+.head-sec img:nth-child(7){
+    width: 50px;
+    top: 10%;
+}
+.head-sec img:nth-child(8){
+    width: 200px;
+    top: 50%;
+}
+.nav-section ul{
+    width: 100%;
+}
+.head-sec .button{
+    width:250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #dfe9f5;
+    height: 110px;
+    position: absolute;
+    top: 70%;    
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+.button .progress{
+    width :100%;
+    height :40px;
+    border-radius:20px;
+    background :#f8db94;
+    position : relative ;
+    top:15px;
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+    padding :12.5px 15px;
+}
+.progress ul{
+    width:100%;
+    height :100%;
+    border-radius:inherit;
+    background :#1f2336;
+    position :relative;
+    display :flex;
+}
+.progress ul li{
+    width:25px;
+    height :25px;
+    border:4px solid #1f2336;
+    border-radius:50%;
+    background :#dfe9f5;
+    position : absolute;
+    top:-4.5px;
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+.progress ul li:nth-child(1){
+    left:0%;
+}
+.progress ul li:nth-child(2){
+    left:22.5%;
+}
+.progress ul li:nth-child(3){
+    left:45%;
+}
+.progress ul li:nth-child(4){
+    left:67.5%;
+}
+.progress ul li:nth-child(5){
+    left:89.5%;
+    border:none;
+    background :none;
+    position : relative ;
+    padding-bottom:5px;
+}
+
+.progress ul .finish img{
+    width :35px;
+    
+}
+.button .img2{
+    width: 100px;
+    position: absolute;
+    transform: translate(50%,-80%);
+}
+.play-game{
+    max-width:100%;
+    width:800px;
+    height:180px;
+    background-color: #dfe9f5;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    z-index:-1;
+    padding-bottom:20px;
+}
+.play-game .description{
+    width:80%;
+    margin:auto;
+    height :60px;
+    border-radius:10px;
+    background :#f76d6d;
+    position : relative ;
+    top :-30px;
+    display : flex ;
+    justify-content: center ;
+    color :#dfe9f5;
+    font-size:14px;
+}
+.text{
+    width:100%;
+    text-align: center ;
+    font-size:12px;
+    line-height:17px;
+    position :relative;
+    top:-10px;
+}
+.play-game button {
+    display :block;
+    margin:0px auto 0px auto;
+    padding :7px 15px;
+    border:none;
+    background :#4070f4;
+    color :#dfe9f5;
+    border-radius:30px;
+}
+.play-game .description::before{
+    content:"";
+    width :103%;
+    position: absolute;
+    background :rgba(0,0,0,.1);
+    height :100%;
+    top:4px;
+    display : block ;
+    margin: auto ;
+    border-radius:10px;
+    z-index:-1;
+}
+.nav-section ul li{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+}
+.nav-section ul li i{
+    color: #dfe9f5;
+    font-size: 20px;
+}
+.nav-section ul li:hover{
+    background-color: rgba(225,225,225,.2);
+}
+.div{
+    width: 300px;
+    height: 300px;
+    background-color: #dfe9f5;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin:5px;
+    position: relative;
+    border-radius:12.5px;
+    padding:10px 0px;
+    cursor:pointer;
+    
+    transition:.5s;
+}
+.div::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:rgba(225,225,225,.72);
+    top:2px;
+    z-index:-1;
+    border-radius:15px;
+}
+.div:active{
+    scale: .95;
+    z-index:19;
+}
+.div .dd1{
+    width: 94.5%;
+    height:65%;
+    border-radius:9px 9px 0px 0px;
+    padding:10px;
+    background-position:-20px 20px;
+    background-size:101%;
+    background-image:url("svg.png");
+    border-bottom:none;
+    background-repeat:no-repeat;
+}
+.dd2{
+    height:35%;
+    width:94.5%;
+    background:#ffffff;
+    border-radius:0px 0px 9px 9px;
+    border:1px solid #f2f2f2;
+    border-top:none;
+    padding:10px;
+    position: relative;
+    
+}
+.dd2 button{
+    background:#4070f4;
+    color:#fff;
+    padding:5px 15px;
+    border:none;
+    border-radius:20px;
+}
+.dd2 i{
+    font-size:25px;
+    display: inline-block;
+    position: absolute;
+    right:15px;
+    height:25px;
+    top:15px;
+}
+.af{
+    background-size:10%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    height: 100%;
+
+}
+nav .logo-brand{
+    width: 200px;
+    height: 100%;
+    background-image: url(logo-big.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav .other-things{
+    
+    width:auto;
+    
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: 90%;
+    background-color: #1f2336;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.other-things img{
+    width: 40px;
+    height: 40px;
+}
+.other-things p{
+    color: #dfe9f5;
+    font-size: large;
+    padding-left:5px;
+}
+@media screen and (max-width:1037px) {
+    .div{
+        width:200px;
+    }
+    
+}
+@media screen and (max-width:539px) {
+    main{
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    main .nav-section{
+        max-width: 350px;
+        width: 100%;
+        height: 65px;
+        background-color: #161a22;
+        border: none;
+        display: flex;
+        padding: 10px;
+        border-radius: 29px;
+        bottom: 10px;
+    }
+    main .tournament-page{
+        padding:75px 15px 15px 15px;
+    }
+    
+    .nav-section ul{
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .nav-section ul li{
+        width: 55px;
+        height: 100%;
+        z-index: 100;
+    }
+    main .content-section {
+        padding:75px 15px 15px 15px;
+    }
+    .div{
+        width: 200px;
+
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:457px) {
+    .div{
+        width: 180px;
+    }
+    p{
+        font-size: 15px;
+    }
+    nav .logo-brand{
+        background-image: url(small-logo.png);
+        width: 50px;
+    }
+}
+@media screen and (max-width:417px) {
+    .div{
+        width: 150px;
+        height: 230px;
+    }
+    .dd2 p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:399px) {
+    .div{
+        width: 280px;
+        height: 280px;
+    }
+    .dd2 p{
+        font-size: 16px;
+    }
+}
+
