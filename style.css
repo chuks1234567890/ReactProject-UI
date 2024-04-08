@@ -451,10 +451,6 @@ nav .other-things{
     p{
         font-size: 15px;
     }
-    nav .logo-brand{
-        background-image: url(small-logo.png);
-        width: 50px;
-    }
 }
 @media screen and (max-width:417px) {
     .div{
